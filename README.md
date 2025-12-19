@@ -25,11 +25,24 @@ copy .env.example .env
 
 ## 실행 방법
 
+### 로컬 실행
 ```bash
 streamlit run app.py
 ```
 
 브라우저에서 자동으로 열립니다 (기본: http://localhost:8501)
+
+### Streamlit Cloud 배포
+
+1. [Streamlit Cloud](https://streamlit.io/cloud)에 로그인
+2. "New app" 클릭
+3. GitHub 저장소 선택: `jeilcom/Quiz`
+4. Main file path: `app.py`
+5. Deploy 클릭
+6. 배포 후 Settings에서 Secrets 설정 (선택사항):
+   ```toml
+   GEMINI_API_KEY = "your_api_key_here"
+   ```
 
 ## 사용 방법
 
